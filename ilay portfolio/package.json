@@ -1,0 +1,17 @@
+{
+  "name": "ilay-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website in Hebrew",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": ["portfolio", "hebrew", "rtl"],
+  "author": "עילאי",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.9.8"
+  },
+  "devDependencies": {}
+}
