@@ -143,6 +143,15 @@ body {
     max-width: 720px;
 }
 
+.hero-logo {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .hero-title {
     font-size: clamp(2.75rem, 6vw, 4.5rem);
     font-weight: 800;
