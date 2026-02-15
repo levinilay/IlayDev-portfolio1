@@ -117,6 +117,37 @@ body {
     transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
 }
 
+.nav-lang {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: color 0.25s var(--ease), background 0.25s var(--ease);
+}
+
+.lang-btn:hover {
+    color: var(--text);
+}
+
+.lang-btn.active {
+    color: var(--accent);
+}
+
+.lang-divider {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
 /* ----- Hero ----- */
 .hero {
     min-height: 100vh;
@@ -205,6 +236,30 @@ body {
     transform: translateY(-1px);
 }
 
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-buttons .btn {
+    margin: 0;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-dim);
+    color: var(--accent-bright);
+    box-shadow: none;
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 32px;
@@ -273,11 +328,33 @@ body {
     margin: 0 auto;
 }
 
+.about-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+    font-size: 0.9375rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.about-meta-dot {
+    color: var(--text-muted);
+}
+
 .about-text p {
     font-size: 1.0625rem;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.8;
+}
+
+.about-different {
+    margin-bottom: 1.5rem;
+}
+
+.about-different strong {
+    color: var(--text);
 }
 
 .skills {
@@ -396,10 +473,22 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.project-problem {
+    font-size: 0.875rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
 .project-content p {
     font-size: 0.9375rem;
     color: var(--text-secondary);
     line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.project-tech {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
     margin-bottom: 1rem;
 }
 
@@ -414,6 +503,154 @@ body {
 .project-link:hover {
     color: var(--accent-bright);
     text-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* ----- Pricing ----- */
+.pricing {
+    background: var(--bg);
+}
+
+.pricing-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 560px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pricing-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    position: relative;
+    transition: border-color 0.3s var(--ease);
+}
+
+.pricing-card:hover {
+    border-color: var(--border-hover);
+}
+
+.pricing-card.pricing-featured {
+    border-color: var(--accent);
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.pricing-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+
+.pricing-desc {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.pricing-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+}
+
+.pricing-features {
+    list-style: none;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.pricing-features li::before {
+    content: "✓ ";
+    color: var(--accent);
+}
+
+/* ----- Testimonials ----- */
+.testimonials {
+    background: var(--bg-elevated);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 2rem;
+}
+
+.testimonial-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    transition: border-color 0.3s var(--ease);
+}
+
+.testimonial-card:hover {
+    border-color: var(--border-hover);
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.testimonials-note {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* ----- First clients offer ----- */
+.first-clients {
+    background: var(--bg);
+}
+
+.first-clients-content {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.first-clients-text {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.first-clients-content .btn {
+    margin: 0;
 }
 
 /* ----- Contact ----- */
@@ -601,7 +838,9 @@ body {
 /* ----- Responsive ----- */
 @media (max-width: 900px) {
     .services-grid,
-    .projects-grid {
+    .projects-grid,
+    .pricing-grid,
+    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 }

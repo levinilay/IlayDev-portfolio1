@@ -29,11 +29,19 @@
         <div class="container">
             <div class="nav-brand">עילאי</div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">בית</a></li>
-                <li><a href="#about" class="nav-link">אודותיי</a></li>
-                <li><a href="#services" class="nav-link">שירותים</a></li>
-                <li><a href="#projects" class="nav-link">פרויקטים</a></li>
-                <li><a href="#contact" class="nav-link">יצירת קשר</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="navHome">בית</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="navAbout">אודותיי</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="navServices">שירותים</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="navProjects">פרויקטים</a></li>
+                <li><a href="#pricing" class="nav-link" data-i18n="navPricing">מחירים</a></li>
+                <li><a href="#testimonials" class="nav-link" data-i18n="navTestimonials">המלצות</a></li>
+                <li><a href="#first-clients" class="nav-link" data-i18n="navFirstClients">הצעה ראשונים</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="navContact">יצירת קשר</a></li>
+                <li class="nav-lang">
+                    <button type="button" class="lang-btn active" data-lang="he" aria-label="עברית">עב</button>
+                    <span class="lang-divider">|</span>
+                    <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+                </li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="תפריט">
                 <span></span>
@@ -49,12 +57,15 @@
         <div class="container">
             <div class="hero-content fade-in">
                 <img src="preview%20copy%20Background%20Removed.png" alt="Ilay dev" class="hero-logo">
-                <h1 class="hero-title">עילאי לוין</h1>
-                <h2 class="hero-subtitle">מפתח תוכנה ומעצב דיגיטלי</h2>
-                <p class="hero-description">
+                <h1 class="hero-title" data-i18n="heroTitle">עילאי לווין</h1>
+                <h2 class="hero-subtitle" data-i18n="heroSubtitle">מפתח תוכנה ומעצב דיגיטלי</h2>
+                <p class="hero-description" data-i18n="heroDesc">
                     יוצר חוויות דיגיטליות עם דגש על פרטים, ביצועים ועיצוב מודרני. משלב קוד נקי עם חוויית משתמש מעולה.
                 </p>
-                <a href="#contact" class="btn btn-primary">יצירת קשר</a>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" data-i18n="heroBtn">יצירת קשר</a>
+                    <a href="#first-clients" class="btn btn-secondary" data-i18n="heroBtnFirst">רוצים להיות ראשוניים לעבוד איתי?</a>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -65,16 +76,22 @@
     <!-- About Section -->
     <section id="about" class="section about">
         <div class="container">
-            <span class="section-label">אודות</span>
-            <h2 class="section-title">אודותיי</h2>
+            <span class="section-label" data-i18n="sectionAbout">אודות</span>
+            <h2 class="section-title" data-i18n="sectionAboutTitle">אודותיי</h2>
             <div class="about-content">
                 <div class="about-text fade-in-up">
-                    <p>
+                    <div class="about-meta" data-i18n="aboutMeta">
+                        מתכנת מזה שנתיים • בן 13
+                    </div>
+                    <p data-i18n="aboutP1">
                         אני מפתח תוכנה מקצועי עם תשוקה ליצירת פתרונות דיגיטליים חדשניים ואיכותיים. 
                         אני מתמחה ביצירת אתרי תדמית ובתחזוקה שוטפת שלהם, וכן בבניית אתרי מכירות — 
                         אתרי מכירות אני בונה ולא מתחזק; אכוון אתכם לחברות מקצועיות שמתמחות בתחזוקת אתרי מסחר.
                     </p>
-                    <p>
+                    <p class="about-different">
+                        <strong data-i18n="aboutDifferentLabel">מה מייחד אותי:</strong> <span data-i18n="aboutDifferentText">לומד מהר, כותב קוד מסודר וקריא, זמין ללקוחות, ומביא גישה צעירה ורעננה לפרויקטים.</span>
+                    </p>
+                    <p data-i18n="aboutP3">
                         הגישה שלי משלבת בין יצירתיות טכנית לבין הבנה עמוקה של צרכי המשתמשים, 
                         תוך שמירה על קוד נקי, יעיל וניתן לתחזוקה.
                     </p>
@@ -93,23 +110,23 @@
     <!-- Services Section -->
     <section id="services" class="section services">
         <div class="container">
-            <span class="section-label">שירותים</span>
-            <h2 class="section-title">מה אני מציע</h2>
+            <span class="section-label" data-i18n="sectionServices">שירותים</span>
+            <h2 class="section-title" data-i18n="sectionServicesTitle">מה אני מציע</h2>
             <div class="services-grid">
                 <div class="service-card fade-in-up">
                     <div class="service-icon" aria-hidden="true">Web</div>
-                    <h3>אתרי תדמית</h3>
-                    <p>בניית אתרי תדמית מקצועיים ותחזוקה שוטפת — עדכונים, גיבויים ושדרוגים. מתאים לעסקים ולחברות.</p>
+                    <h3 data-i18n="service1Title">אתרי תדמית</h3>
+                    <p data-i18n="service1Desc">בניית אתרי תדמית מקצועיים ותחזוקה שוטפת — עדכונים, גיבויים ושדרוגים. מתאים לעסקים ולחברות.</p>
                 </div>
                 <div class="service-card fade-in-up">
                     <div class="service-icon" aria-hidden="true">Shop</div>
-                    <h3>אתרי מכירות</h3>
-                    <p>בניית אתרי מסחר ואי־קומרס. תחזוקה שוטפת אינה במסגרת השירות — אכוון אתכם לחברות שמתמחות בתחזוקת אתרי מכירות.</p>
+                    <h3 data-i18n="service2Title">אתרי מכירות</h3>
+                    <p data-i18n="service2Desc">בניית אתרי מסחר ואי־קומרס. תחזוקה שוטפת אינה במסגרת השירות — אכוון אתכם לחברות שמתמחות בתחזוקת אתרי מכירות.</p>
                 </div>
                 <div class="service-card fade-in-up">
                     <div class="service-icon" aria-hidden="true">UI</div>
-                    <h3>עיצוב UI/UX</h3>
-                    <p>ממשקים ברורים ואינטואיטיביים עם דגש על חוויית משתמש ונגישות.</p>
+                    <h3 data-i18n="service3Title">עיצוב UI/UX</h3>
+                    <p data-i18n="service3Desc">ממשקים ברורים ואינטואיטיביים עם דגש על חוויית משתמש ונגישות.</p>
                 </div>
             </div>
         </div>
@@ -118,33 +135,117 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects">
         <div class="container">
-            <span class="section-label">עבודות</span>
-            <h2 class="section-title">פרויקטים</h2>
+            <span class="section-label" data-i18n="sectionProjects">עבודות</span>
+            <h2 class="section-title" data-i18n="sectionProjectsTitle">פרויקטים</h2>
             <div class="projects-grid">
                 <div class="project-card fade-in-up">
                     <div class="project-image"></div>
                     <div class="project-content">
-                        <h3>משק פרחים</h3>
-                        <p>אתר יוקרתי למשק וחנות פרחים. כולל גלריה, מידע על השירותים, טופס יצירת קשר ועיצוב מודרני ורספונסיבי. פותח עם HTML, CSS ו-JavaScript.</p>
-                        <a href="https://ilaydevlevin-hash.github.io/mesehek25flowers-tryout-notpublic/" class="project-link" target="_blank">צפה בפרויקט →</a>
+                        <h3 data-i18n="project1Title">משק פרחים</h3>
+                        <p class="project-problem" data-i18n="project1Problem">הבעיה: משק פרחים נדרש לאתר שמציג את המוצרים, מאפשר יצירת קשר ונותן נוכחות דיגיטלית מקצועית.</p>
+                        <p data-i18n="project1Solution">הפתרון: אתר תדמית עם גלריה, דפי שירותים, טופס יצירת קשר ו־RTL. רספונסיבי ומותאם למובייל.</p>
+                        <p class="project-tech" data-i18n="project1Tech">טכנולוגיות: HTML5, CSS3, JavaScript (וונילה).</p>
+                        <a href="https://ilaydevlevin-hash.github.io/mesehek25flowers-tryout-notpublic/" class="project-link" target="_blank" data-i18n="projectLink">צפה בפרויקט →</a>
                     </div>
                 </div>
                 <div class="project-card fade-in-up">
                     <div class="project-image"></div>
                     <div class="project-content">
-                        <h3>מערכת ניהול בית ספר</h3>
-                        <p>מערכת ניהול מקיפה לבתי ספר עם התחברות, הרשמה וניהול תלמידים. כולל ממשק משתמש מודרני, אבטחה מתקדמת וניהול נתונים יעיל. פותח עם HTML, CSS, JavaScript וטכנולוגיות backend.</p>
-                        <a href="https://schoolsystem-demo.surge.sh/login.html" class="project-link" target="_blank">צפה בפרויקט →</a>
+                        <h3 data-i18n="project2Title">מערכת ניהול בית ספר</h3>
+                        <p class="project-problem" data-i18n="project2Problem">הבעיה: בית ספר צריך מערכת להתחברות משתמשים, הרשמה וניהול תלמידים בצורה מסודרת.</p>
+                        <p data-i18n="project2Solution">הפתרון: מערכת עם דף התחברות והרשמה, ממשק ניהול וניהול גישה. מתאים להדגמה (Demo).</p>
+                        <p class="project-tech" data-i18n="project2Tech">טכנולוגיות: HTML, CSS, JavaScript, Backend (Node/דומה).</p>
+                        <a href="https://schoolsystem-demo.surge.sh/login.html" class="project-link" target="_blank" data-i18n="projectLink">צפה בפרויקט →</a>
                     </div>
                 </div>
                 <div class="project-card fade-in-up">
                     <div class="project-image"></div>
                     <div class="project-content">
-                        <h3>Class-Man</h3>
-                        <p>אתר מסחרי למותג אופנה גברית ישראלית פרימיום. כולל דף בית, קטגוריות מוצרים, עגלת קניות, אודות וצור קשר. עיצוב מודרני ורספונסיבי.</p>
-                        <a href="https://class-man-demo123.surge.sh/" class="project-link" target="_blank">צפה בפרויקט →</a>
+                        <h3 data-i18n="project3Title">Class-Man</h3>
+                        <p class="project-problem" data-i18n="project3Problem">הבעיה: מותג אופנה גברית צריך חנות אונליין עם קטגוריות, עגלת קניות ומראה פרימיום.</p>
+                        <p data-i18n="project3Solution">הפתרון: אתר מסחרי עם דף בית, קטגוריות, עגלת קניות, דפי אודות וצור קשר. עיצוב מודרני ורספונסיבי.</p>
+                        <p class="project-tech" data-i18n="project3Tech">טכנולוגיות: HTML, CSS, JavaScript. עגלת קניות וממשק מוצרים.</p>
+                        <a href="https://class-man-demo123.surge.sh/" class="project-link" target="_blank" data-i18n="projectLink">צפה בפרויקט →</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section pricing">
+        <div class="container">
+            <span class="section-label" data-i18n="sectionPricing">מחירים</span>
+            <h2 class="section-title" data-i18n="sectionPricingTitle">חבילות שירות</h2>
+            <p class="pricing-intro" data-i18n="pricingIntro">מחירים להתחלה — כל פרויקט מותאם אישית. ללא התחייבות לפני שיחה.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in-up">
+                    <h3 data-i18n="pricing1Title">אתר תדמית</h3>
+                    <p class="pricing-desc" data-i18n="pricing1Desc">דף נחיתה או אתר תדמית עד 5 דפים, עיצוב מודרני, טופס יצירת קשר.</p>
+                    <p class="pricing-price" data-i18n="pricing1Price">החל מ־₪750</p>
+                    <ul class="pricing-features">
+                        <li data-i18n="pricing1F1">עיצוב רספונסיבי</li>
+                        <li data-i18n="pricing1F2">טופס יצירת קשר</li>
+                        <li data-i18n="pricing1F3">תחזוקה חודשית (אופציונלי)</li>
+                    </ul>
+                </div>
+                <div class="pricing-card pricing-featured fade-in-up">
+                    <span class="pricing-badge" data-i18n="pricingBadge">פופולרי</span>
+                    <h3 data-i18n="pricing2Title">אתר תדמית + תחזוקה</h3>
+                    <p class="pricing-desc" data-i18n="pricing2Desc">אתר תדמית מלא כולל עדכונים, גיבויים ותחזוקה שוטפת.</p>
+                    <p class="pricing-price" data-i18n="pricing2Price">החל מ־₪1,750</p>
+                    <ul class="pricing-features">
+                        <li data-i18n="pricing2F1">כל מה שבחבילת תדמית</li>
+                        <li data-i18n="pricing2F2">תחזוקה שוטפת חודשית</li>
+                        <li data-i18n="pricing2F3">עדכוני תוכן וגיבויים</li>
+                    </ul>
+                </div>
+                <div class="pricing-card fade-in-up">
+                    <h3 data-i18n="pricing3Title">אתר מכירות</h3>
+                    <p class="pricing-desc" data-i18n="pricing3Desc">אתר מסחר עם קטגוריות, עגלת קניות וממשק ניהול בסיסי. ללא תחזוקה — אכוון לחברות תחזוקה.</p>
+                    <p class="pricing-price" data-i18n="pricing3Price">החל מ־₪2,750</p>
+                    <ul class="pricing-features">
+                        <li data-i18n="pricing3F1">עגלת קניות</li>
+                        <li data-i18n="pricing3F2">קטגוריות מוצרים</li>
+                        <li data-i18n="pricing3F3">הכוונה לחברת תחזוקה</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <span class="section-label" data-i18n="sectionTestimonials">המלצות</span>
+            <h2 class="section-title" data-i18n="sectionTestimonialsTitle">מה אומרים על העבודה שלי</h2>
+            <!-- ערוך המלצות: חפש "המלצה 1" ב-index.html והחלף בטקסט ובשם -->
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-up">
+                    <p class="testimonial-text">המלצה 1 — ערוך כאן את טקסט ההמלצה</p>
+                    <p class="testimonial-author">— שם הממליץ / תפקיד</p>
+                </div>
+                <div class="testimonial-card fade-in-up">
+                    <p class="testimonial-text">המלצה 2 — ערוך כאן את טקסט ההמלצה</p>
+                    <p class="testimonial-author">— שם הממליץ / תפקיד</p>
+                </div>
+                <div class="testimonial-card fade-in-up">
+                    <p class="testimonial-text">המלצה 3 — ערוך כאן את טקסט ההמלצה</p>
+                    <p class="testimonial-author">— שם הממליץ / תפקיד</p>
+                </div>
+            </div>
+            <p class="testimonials-note" data-i18n="testimonialsNote">מלא את ההמלצות למעלה — ערוך את שלושת הכרטיסים ב-index.html (חפש "המלצה 1").</p>
+        </div>
+    </section>
+
+    <!-- First clients / Free site offer -->
+    <section id="first-clients" class="section first-clients">
+        <div class="container">
+            <span class="section-label" data-i18n="firstClientsLabel">הצעה</span>
+            <h2 class="section-title" data-i18n="firstClientsTitle">רוצים להיות בין הראשונים?</h2>
+            <div class="first-clients-content fade-in-up">
+                <p class="first-clients-text" data-i18n="firstClientsText">אני יכול לפתח לכם אתר תדמית או אתר מכירות בחינם — כדי להתנסות ולהראות מה אני יודע. מתאים למי שמוכן להיות בין הלקוחות הראשונים שלי.</p>
+                <a href="#contact" class="btn btn-primary" data-i18n="firstClientsBtn">מעוניין? צור קשר</a>
             </div>
         </div>
     </section>
@@ -152,12 +253,12 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact">
         <div class="container">
-            <span class="section-label">יצירת קשר</span>
-            <h2 class="section-title">בואו נדבר</h2>
+            <span class="section-label" data-i18n="sectionContact">יצירת קשר</span>
+            <h2 class="section-title" data-i18n="sectionContactTitle">בואו נדבר</h2>
             <div class="contact-content">
                 <div class="contact-info fade-in-up">
-                    <h3>פרטי התקשרות</h3>
-                    <p>מעוניינים בפרויקט משותף או בשאלה? אשמח לתשובה.</p>
+                    <h3 data-i18n="contactSubtitle">פרטי התקשרות</h3>
+                    <p data-i18n="contactIntro">מעוניינים בפרויקט משותף או בשאלה? אשמח לתשובה.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <span class="contact-icon" aria-hidden="true">@</span>
@@ -171,22 +272,22 @@
                 </div>
                 <form id="contactForm" class="contact-form fade-in-up">
                     <div class="form-group">
-                        <label for="name">שם *</label>
+                        <label for="name" data-i18n="formName">שם *</label>
                         <input type="text" id="name" name="name" required>
                         <span class="error-message" id="nameError"></span>
                     </div>
                     <div class="form-group">
-                        <label for="email">אימייל *</label>
+                        <label for="email" data-i18n="formEmail">אימייל *</label>
                         <input type="email" id="email" name="email" required>
                         <span class="error-message" id="emailError"></span>
                     </div>
                     <div class="form-group">
-                        <label for="message">הודעה *</label>
+                        <label for="message" data-i18n="formMessage">הודעה *</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                         <span class="error-message" id="messageError"></span>
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
-                        <span class="btn-text">שלח הודעה</span>
+                        <span class="btn-text" data-i18n="formSubmit">שלח הודעה</span>
                         <span class="btn-loader" style="display: none;"></span>
                     </button>
                     <div id="formMessage" class="form-message"></div>
@@ -198,7 +299,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 עילאי. כל הזכויות שמורות.</p>
+            <p data-i18n="footer">&copy; 2026 עילאי. כל הזכויות שמורות.</p>
         </div>
     </footer>
 
