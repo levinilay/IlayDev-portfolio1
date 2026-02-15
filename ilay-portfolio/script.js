@@ -8,7 +8,7 @@ const TRANSLATIONS = {
         navPricing: 'מחירים',
         navTestimonials: 'המלצות',
         navContact: 'יצירת קשר',
-        heroTitle: 'עילאי לווין',
+        heroTitle: 'עילאי לוין',
         heroSubtitle: 'מפתח תוכנה ומעצב דיגיטלי',
         heroDesc: 'יוצר חוויות דיגיטליות עם דגש על פרטים, ביצועים ועיצוב מודרני. משלב קוד נקי עם חוויית משתמש מעולה.',
         heroBtn: 'יצירת קשר',
